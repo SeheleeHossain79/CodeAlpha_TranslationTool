@@ -18,7 +18,7 @@ CodeAlpha Artificial Intelligence internship (Task 1).
 
 ## Installation
 ```
-git clone https://github.com/YOUR_USERNAME/CodeAlpha_TranslationTool.git
+git clone https://github.com/SeheleeHossain79/CodeAlpha_TranslationTool.git
 cd CodeAlpha_TranslationTool
 python -m venv venv
 venv\Scripts\activate
