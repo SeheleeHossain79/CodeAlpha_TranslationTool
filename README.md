@@ -33,5 +33,5 @@ Python, Streamlit, deep-translator, gTTS, langdetect
 The free translation services are less accurate than the official paid APIs,
 especially for idioms. A future improvement is the Google Cloud Translation API.
 
-<!-- ## Screenshot
-![App screenshot](screenshot.png) -->
+## Screenshot
+![App screenshot](TranslationTool.png)

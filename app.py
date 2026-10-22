@@ -9,11 +9,26 @@ DetectorFactory.seed = 0
 
 st.set_page_config(page_title="Language Translation Tool", page_icon="🌐")
 
+# st.markdown(
+#     """
+#     <style>
+#     .block-container {max-width: 800px; padding-top: 2rem;}
+#     div.stButton > button {width: 100%; border-radius: 8px;}
+#     </style>
+#     """,
+#     unsafe_allow_html=True,
+# )
+
 st.markdown(
     """
     <style>
     .block-container {max-width: 800px; padding-top: 2rem;}
-    div.stButton > button {width: 100%; border-radius: 8px;}
+    div.stButton > button {
+        width: 100%;
+        border-radius: 8px;
+        height: 2.6rem;
+        font-weight: 600;
+    }
     </style>
     """,
     unsafe_allow_html=True,
@@ -74,11 +89,19 @@ def clear_all():
 st.title("🌐 Language Translation Tool")
 st.caption("Type text, pick languages, and translate.")
 
-col1, col_mid, col2 = st.columns([5, 1.2, 5])
+# col1, col_mid, col2 = st.columns([5, 1.2, 5])
+# with col1:
+#     st.selectbox("From", ["auto"] + names, key="src_lang")
+# with col_mid:
+#     st.write("")  # spacer so the button lines up with the dropdowns
+#     st.button("⇄", on_click=swap_languages, help="Swap languages")
+# with col2:
+#     st.selectbox("To", names, key="tgt_lang")
+
+col1, col_mid, col2 = st.columns([5, 1.2, 5], vertical_alignment="bottom")
 with col1:
     st.selectbox("From", ["auto"] + names, key="src_lang")
 with col_mid:
-    st.write("")  # spacer so the button lines up with the dropdowns
     st.button("⇄", on_click=swap_languages, help="Swap languages")
 with col2:
     st.selectbox("To", names, key="tgt_lang")
